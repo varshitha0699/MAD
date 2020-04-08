@@ -122,8 +122,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final EditText e1=(EditText)findViewById(R.id.editText);
         final EditText e2=(EditText)findViewById(R.id.editText2);
-        final float num1=Float.parseFloat(e1.getText().toString());
-        final float num2=Float.parseFloat(e2.getText().toString());
+       
         final TextView t1=(TextView)findViewById(R.id.res);
         Button add=(Button)findViewById(R.id.add);
         Button sub=(Button)findViewById(R.id.sub);
@@ -141,6 +140,8 @@ public class MainActivity extends AppCompatActivity {
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+  float num1=Float.parseFloat(e1.getText().toString());
+         float num2=Float.parseFloat(e2.getText().toString());
                 float ans=num1-num2;
                 t1.setText(Float.toString(ans));
             }
@@ -148,6 +149,8 @@ public class MainActivity extends AppCompatActivity {
         mul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+  float num1=Float.parseFloat(e1.getText().toString());
+         float num2=Float.parseFloat(e2.getText().toString());
                 float ans=num1*num2;
                 t1.setText(Float.toString(ans));
             }
@@ -155,6 +158,8 @@ public class MainActivity extends AppCompatActivity {
         div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+         float num1=Float.parseFloat(e1.getText().toString());
+           float num2=Float.parseFloat(e2.getText().toString());
                 float ans=num1/num2;
                 t1.setText(Float.toString(ans));
             }
