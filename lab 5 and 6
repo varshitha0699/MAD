@@ -40,6 +40,29 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        
+        
+        
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.button3) {
+                    myDB.update(name.getText().toString(),Integer.parseInt(marks.getText().toString()));
+                    Toast.makeText(MainActivity.this,"Data updated",Toast.LENGTH_LONG).show();
+
+                }
+            }});
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.button4) {
+                    myDB.delete(name.getText().toString());
+                    Toast.makeText(MainActivity.this,"Record deleted",Toast.LENGTH_LONG).show();
+
+                   
+                }
+            }
+        });
     }
 }
 
@@ -100,4 +123,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return buffer;
     }
+    
+     public void update(String name, int marks) {
+        String query = "UPDATE student_table SET Marks=" + marks +
+                " WHERE Name='" + name + "';";
+        db.execSQL(query);
+    }
+    public void delete(String name){
+        String query="DELETE FROM student_table WHERE Name='"+name+"';";
+        db.execSQL(query);}
 }
