@@ -24,16 +24,16 @@ public class MainActivity extends AppCompatActivity {
         paint.setColor(Color.BLUE);
         paint.setTextSize(50);
 
-        canvas.drawText("Rectangle",420,150,paint);
+            canvas.drawText("Rectangle",420,50,paint);
         canvas.drawRect(400,200,650,700,paint);
 
-        canvas.drawText("Square",420,150,paint);
-        canvas.drawRect(400,400,650,650,paint);
+        canvas.drawText("Square",100,600,paint);
+        canvas.drawRect(80,700,300,900,paint);
 
-        canvas.drawText("Circle",420,150,paint);
-        canvas.drawCircle(200,200,100,paint);
+        canvas.drawText("Circle",100,100,paint);
+        canvas.drawCircle(80,250,100,paint);
 
-        canvas.drawText("Line",420,150,paint);
-        canvas.drawLine(0,0,0,50,paint);
+        canvas.drawText("Line",420,700,paint);
+        canvas.drawLine(450,710,450,900,paint);
     }
 }
